@@ -1,0 +1,45 @@
+.Header {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 3%;
+    width: 100%;
+    /* position: sticky; */
+    z-index: 1;
+    /* padding: 20px; */
+}
+
+.HeaderLogo {
+    background-color: chartreuse;
+    left: 0;
+}
+
+.HeaderMenu {
+    display: flex;
+    flex-direction: row;
+    margin-right: 5%;
+}
+
+.HeaderMenuItem {
+    justify-items: center;
+    background-color: #fff;
+    /* margin: 5px; */
+    width: 150px;
+    border-radius: 50px;
+}
+
+.HeaderItemText {
+    /* background-color: springgreen; */
+    text-align: center;
+    color: #9a9a9a;
+}
+
+.Logo {
+    height: 8vmin;
+    pointer-events: none;
+    background-color: deeppink;
+}
