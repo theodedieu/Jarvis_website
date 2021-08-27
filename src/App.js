@@ -5,8 +5,10 @@ import React from 'react';
 // import './App.css';
 // import Content from './Content';
 // import Header from './Header';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router } from 'react-router-dom';
+import Home from './pages';
+import SigninPage from './pages/signin';
 
 class App extends React.Component {
   // constructor(props) {
@@ -59,7 +61,11 @@ class App extends React.Component {
 
     return (
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
+        <Switch>
+          <Route path='/' component={Home} exact />
+          <Route path='/signin' component={SigninPage} exact />
+        </Switch>
         {/* <Header/>
           <body>
             <div className="progress-container" style={progressContainerStyle}>
