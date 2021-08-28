@@ -1,78 +1,16 @@
 import React from 'react';
-// import Rotate from 'react-reveal/Rotate';
-// import Roll from 'react-reveal/Roll';
-// import logo from './jarvis_icon.png';//'./logo.svg';
-// import './App.css';
-// import Content from './Content';
-// import Header from './Header';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
 import Home from './pages';
 import SigninPage from './pages/signin';
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     scrolled: 0
-  //   };
-  // }
-
-  // componentDidMount() {
-  //   window.addEventListener("scroll", this.scrollProgress);
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener("scroll", this.scrollProgress);
-  // }
-
-  // scrollProgress = () => {
-  //   const scrollPx = document.documentElement.scrollTop;
-  //   const winHeightPx =
-  //     document.documentElement.scrollHeight -
-  //     document.documentElement.clientHeight;
-  //   const scrolled = `${scrollPx / winHeightPx * 100}%`;
-
-  //   console.log(scrolled);
-
-  //   this.setState({
-  //     scrolled: scrolled
-  //   });
-  // };
-
   render() {
-    // const progressContainerStyle = {
-    //   // background: "#c2c9ff",
-    //   // boxShadow: "0 2px 4px rgba(0, 0, 0, 0.3)",
-    //   height: "5px",
-    //   position: "fixed",
-    //   top: 0,
-    //   left: -5,
-    //   width: "100vw",
-    //   zIndex: 99
-    // };
-
-    // const progressBarStyle = {
-    //   height: "10px",
-    //   background: "#7482ff",
-    //   borderRadius: "35px",
-    //   width: this.state.scrolled
-    // };
-
     return (
       <Router>
-        {/* <Navbar /> */}
         <Switch>
           <Route path='/' component={Home} exact />
           <Route path='/signin' component={SigninPage} exact />
         </Switch>
-        {/* <Header/>
-          <body>
-            <div className="progress-container" style={progressContainerStyle}>
-            <div className="progress-bar" style={progressBarStyle} />
-            </div>
-          </body>
-        <Content/> */}
       </Router>
     );
 

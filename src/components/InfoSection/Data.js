@@ -1,7 +1,7 @@
 export const homeObjOne = {
   id: 'about',
   lightBg: false,
-  lightText: true,
+  lightText: false,
   lightTextDesc: true,
   topLine: 'Premium Bank',
   headline: 'Headline lorem Ipsum...',
@@ -12,13 +12,13 @@ export const homeObjOne = {
   alt: 'Car',
   dark: true,
   primary: true,
-  darkText: false
+  darkText: true
 };
 
 export const homeObjTwo = {
   id: 'discover',
   lightBg: false,
-  lightText: true,
+  lightText: false,
   lightTextDesc: true,
   topLine: 'Premium Bank',
   headline: 'Headline lorem Ipsum...',
@@ -29,13 +29,13 @@ export const homeObjTwo = {
   alt: 'Car',
   dark: true,
   primary: true,
-  darkText: false
+  darkText: true
 };
 
 export const homeObjThree = {
   id: 'services',
   lightBg: false,
-  lightText: true,
+  lightText: false,
   lightTextDesc: true,
   topLine: 'Premium Bank',
   headline: 'Headline lorem Ipsum...',
@@ -46,5 +46,5 @@ export const homeObjThree = {
   alt: 'Car',
   dark: true,
   primary: true,
-  darkText: false
+  darkText: true
 };
