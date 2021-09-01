@@ -6,13 +6,15 @@ import Navbar from '../components/Navbar';
 import Services from '../components/Services';
 import Sidebar from '../components/Sidebar';
 
-import Roll from 'react-reveal/Roll';
+import Fade from 'react-reveal/Fade';
 
 import {
   homeObjOne,
   homeObjTwo,
-  homeObjThree
+  homeObjThree,
+  newsletter
 } from '../components/InfoSection/Data';
+import { jarvisBlue } from '../components/constants';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,10 +27,6 @@ const Home = () => {
   useEffect(() => {
     window.addEventListener("scroll", scrollProgress);
   }, []);
-
-  // componentWillUnmount() {
-  //   window.removeEventListener("scroll", this.scrollProgress);
-  // }
 
   const scrollProgress = () => {
     const scrollPx = document.documentElement.scrollTop;
@@ -47,7 +45,7 @@ const Home = () => {
     // boxShadow: "0 2px 4px rgba(0, 0, 0, 0.3)",
     height: "5px",
     position: "fixed",
-    top: 80,
+    top: 0,
     left: -5,
     width: "100vw",
     zIndex: 99
@@ -55,7 +53,7 @@ const Home = () => {
 
   const progressBarStyle = {
     height: "10px",
-    background: "#7482ff",
+    background: jarvisBlue,
     borderRadius: "35px",
     width: scrolled
   };
@@ -68,16 +66,19 @@ const Home = () => {
         <div className="progress-bar" style={progressBarStyle} />
       </div>
       <HeroSection />
-      <Roll bottom left>
+      <Fade left>
         <InfoSection {...homeObjOne} />
-      </Roll>
-      <Roll bottom right>
-        <InfoSection {...homeObjTwo} />
-      </Roll>
+      </Fade>
       <Services />
-      <Roll bottom left>
+      <Fade right>
+        <InfoSection {...homeObjTwo} />
+      </Fade>
+      <Fade left>
         <InfoSection {...homeObjThree} />
-      </Roll>
+      </Fade>
+      <Fade>
+        <InfoSection {...newsletter} />
+      </Fade>
       <Footer />
     </>
   )

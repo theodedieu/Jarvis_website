@@ -28,11 +28,11 @@ const HeroSection = () => {
       <HeroContent>
         <HeroH1>Le partenaire qui vous réapprend à vivre avec votre diabète</HeroH1>
         <HeroP>
-          Sign up for a new account today and receive une 3ème dose gratuite
+          Inscrivez-vous pour suivre l’actualité de Jarvis
         </HeroP>
         <HeroBtnWrapper>
           <Button
-            to='signup'
+            to='home'
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary='true'
@@ -43,7 +43,7 @@ const HeroSection = () => {
             exact='true'
             offset={-80}
           >
-            Get started {hover ? <ArrowForward /> : <ArrowRight />}
+            Découvrir {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>

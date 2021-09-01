@@ -1,0 +1,10 @@
+export const darkGrey          = '#585858';
+export const darkWhite         = '#fbfbfb';
+export const grey              = '#9a9a9a';
+export const jarvisBlue        = '#7482ff';
+export const jarvisLightBlue   = '#c2c9ff';
+export const lightBlue         = '#5e6fff';
+export const lightGrey         = '#e6e6e6';
+export const mediumGrey        = '#4f4f4f';
+export const tintColor         = '#XXXXXX';
+export const white             = '#fff';

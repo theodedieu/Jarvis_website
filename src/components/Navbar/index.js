@@ -14,6 +14,8 @@ import {
   NavMenu
 } from './NavbarElements';
 
+import Logo from '../../images/2022_logo_Jarvis.png';
+
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
 
@@ -38,7 +40,7 @@ const Navbar = ({ toggle }) => {
       <IconContext.Provider value={{ color: '#fff' }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            <NavLogo to='/' onClick={toggleHome}>Jarvis</NavLogo>
+            <NavLogo to='/' onClick={toggleHome} src={Logo} alt={'Jarvis'} />
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
@@ -51,49 +53,53 @@ const Navbar = ({ toggle }) => {
                   spy={true}
                   exact='true'
                   offset={-80}
+                  scrollNav={scrollNav}
                 >
-                  About
+                  Présentation
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to='discover'
+                  to='features'
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact='true'
                   offset={-80}
+                  scrollNav={scrollNav}
                 >
-                  Discover
+                  Fonctionnalités
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to='services'
+                  to='download'
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact='true'
                   offset={-80}
+                  scrollNav={scrollNav}
                 >
-                  Services
+                  Installer
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to='signup'
+                  to='team'
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact='true'
                   offset={-80}
+                  scrollNav={scrollNav}
                 >
-                  Sign up
+                  L'équipe
                 </NavLinks>
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to='/signin'>Sign in</NavBtnLink>
+              <NavBtnLink to='/signin'>Découvrir</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

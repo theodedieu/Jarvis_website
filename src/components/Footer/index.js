@@ -31,36 +31,17 @@ const Footer = () => {
         <FooterLinksContainer>
           <FooterLinksWrapper>
             <FooterLinkItems>
-              <FooterLinkTitle>About us</FooterLinkTitle>
-                <FooterLink to='/signin'>How it works</FooterLink>
-                <FooterLink to='/signin'>Testimonials</FooterLink>
-                <FooterLink to='/signin'>Careers</FooterLink>
-                <FooterLink to='/signin'>Investors</FooterLink>
-                <FooterLink to='/signin'>Terms of Service</FooterLink>
+              <FooterLinkTitle>A propos</FooterLinkTitle>
+                <FooterLink to=''>Comment ça fonctionne</FooterLink>
+                <FooterLink to=''>Témoignages</FooterLink>
+                <FooterLink to=''>Carrières</FooterLink>
+                <FooterLink to=''>Investisseurs</FooterLink>
+                <FooterLink to=''>Conditions d'utilisation</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
-              <FooterLinkTitle>Contact us</FooterLinkTitle>
-                <FooterLink to='/signin'>How it works</FooterLink>
-                <FooterLink to='/signin'>Testimonials</FooterLink>
-                <FooterLink to='/signin'>Careers</FooterLink>
-                <FooterLink to='/signin'>Investors</FooterLink>
-                <FooterLink to='/signin'>Terms of Service</FooterLink>
-            </FooterLinkItems>
-            <FooterLinkItems>
-              <FooterLinkTitle>Videos</FooterLinkTitle>
-                <FooterLink to='/signin'>How it works</FooterLink>
-                <FooterLink to='/signin'>Testimonials</FooterLink>
-                <FooterLink to='/signin'>Careers</FooterLink>
-                <FooterLink to='/signin'>Investors</FooterLink>
-                <FooterLink to='/signin'>Terms of Service</FooterLink>
-            </FooterLinkItems>
-            <FooterLinkItems>
-              <FooterLinkTitle>Social Media</FooterLinkTitle>
-                <FooterLink to='/signin'>How it works</FooterLink>
-                <FooterLink to='/signin'>Testimonials</FooterLink>
-                <FooterLink to='/signin'>Careers</FooterLink>
-                <FooterLink to='/signin'>Investors</FooterLink>
-                <FooterLink to='/signin'>Terms of Service</FooterLink>
+              <FooterLinkTitle>Contactez-nous</FooterLinkTitle>
+                <FooterLink to=''>Service client</FooterLink>
+                <FooterLink to=''>Partenariat</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
@@ -69,19 +50,19 @@ const Footer = () => {
             <SocialLogo to='/' onClick={toggleHome}>Jarvis</SocialLogo>
             <WebsiteRights>Jarvis © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
             <SocialIcons>
-              <SocialIconLink href='/' target='_blank' aria-labels='Facebook'>
+              <SocialIconLink href='https://www.facebook.com/AppJarvis' target='_blank' aria-label='Facebook'>
                 <FaFacebook />
               </SocialIconLink>
-              <SocialIconLink href='/' target='_blank' aria-labels='Instagram'>
+              <SocialIconLink href='/' target='_blank' aria-label='Instagram'>
                 <FaInstagram />
               </SocialIconLink>
-              <SocialIconLink href='/' target='_blank' aria-labels='Youtube'>
+              <SocialIconLink href='/' target='_blank' aria-label='Youtube'>
                 <FaYoutube />
               </SocialIconLink>
-              <SocialIconLink href='/' target='_blank' aria-labels='Twitter'>
+              <SocialIconLink href='/' target='_blank' aria-label='Twitter'>
                 <FaTwitter />
               </SocialIconLink>
-              <SocialIconLink href='/' target='_blank' aria-labels='Linkedin'>
+              <SocialIconLink href='https://www.linkedin.com/company/jarvis-eip/' target='_blank' aria-label='Linkedin'>
                 <FaLinkedin />
               </SocialIconLink>
             </SocialIcons>
