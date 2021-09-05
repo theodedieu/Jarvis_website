@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { jarvisBlue, jarvisLightBlue, white } from '../constants';
 
 export const Container = styled.div`
   min-height: 692px;
@@ -10,11 +11,7 @@ export const Container = styled.div`
   top: 0;
   z-index: 0;
   overflow: hidden;
-  background: linear-gradient {
-    108deg,
-    rgba(1, 147, 86, 1) 0%,
-    rgba(10, 201, 122, 1) 100%
-  };
+  background: linear-gradient(145deg, ${jarvisBlue} 0%, ${jarvisLightBlue} 100%);
 `;
 
 export const FormWrap = styled.div`
@@ -29,17 +26,21 @@ export const FormWrap = styled.div`
 `;
 
 export const Icon = styled(Link)`
-  margin-left: 32px;
-  margin-top: 32px;
   text-decoration: none;
-  color: #fff;
+  color: #010101;
   font-weight: 700;
   font-size: 32px;
+  text-align: center;
+`;
 
-  @media screen and (max-width: 480px) {
-    margin-left: 16px;
-    margin-top: 8px;
-  }
+export const NavLogo = styled.img`
+  justify-self: flex-start;
+  align-self: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  height: 50px;
 `;
 
 export const FormContent = styled.div`
@@ -54,7 +55,7 @@ export const FormContent = styled.div`
 `;
 
 export const Form = styled.form`
-  background: #010101;
+  background: ${white};
   max-width: 400px;
   height: auto;
   width: 100%;
@@ -63,7 +64,7 @@ export const Form = styled.form`
   margin: 0 auto;
   padding: 80px 32px;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1px 3px ${jarvisLightBlue};
 
   @media screen and (max-width: 480px) {
     padding: 32px 32px;
@@ -72,7 +73,7 @@ export const Form = styled.form`
 
 export const FormH1 = styled.h1`
   margin-bottom: 40px;
-  color: #fff;
+  color: #010101;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
@@ -81,14 +82,21 @@ export const FormH1 = styled.h1`
 export const FormLabel = styled.label`
   margin-bottom: 8px;
   font-size: 14px;
-  color: #fff;
+  color: #010101;
 `;
 
 export const FormInput = styled.input`
   padding: 16px 16px;
   margin-bottom: 32px;
-  border: none;
+  border: 2px solid ${white};
+  border-bottom: 2px solid ${jarvisBlue};
   border-radius: 4px;
+  transition: 0.3s;
+  outline: none;
+
+  &:focus {
+    border: 2px solid ${jarvisBlue};
+  }
 `;
 
 export const FormButton = styled.button`
@@ -104,6 +112,6 @@ export const FormButton = styled.button`
 export const Text = styled.span`
   text-align: center;
   margin-top: 24px;
-  color: #fff;
+  color: #010101;
   font-size: 14px;
 `;

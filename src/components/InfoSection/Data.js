@@ -10,7 +10,7 @@ export const homeObjOne = {
   imgStart: false,
   img: require('../../images/undraw_Mobile_application_mr4r.svg').default,
   alt: 'About',
-  dark: true,
+  dark: false,
   primary: true,
   darkText: true
 };
@@ -27,7 +27,7 @@ export const homeObjTwo = {
   imgStart: true,
   img: require('../../images/undraw_Download_re_li50.svg').default,
   alt: 'Download',
-  dark: true,
+  dark: false,
   primary: true,
   darkText: true
 };
@@ -61,7 +61,7 @@ export const newsletter = {
   imgStart: true,
   img: require('../../images/undraw_Newsletter_re_wrob.svg').default,
   alt: 'Newsletter',
-  dark: true,
+  dark: false,
   primary: true,
   darkText: true
 }

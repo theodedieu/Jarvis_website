@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useForm } from "react-hook-form";
 import {
   Container,
   Form,
@@ -8,25 +9,46 @@ import {
   FormInput,
   FormLabel,
   FormWrap,
-  Icon,
-  Text
+  Icon
 } from './SigninElements';
 
 const SignIn = () => {
+  // const [email, setEmail] = useState(null);
+  // const [fname, setFname] = useState(null);
+  // const [lname, setLname] = useState(null);
+  const { register, handleSubmit } = useForm();
+  const [result, setResult] = useState("");
+  const onSubmit = (data) => setResult(JSON.stringify(data));
+
   return (
     <>
       <Container>
         <FormWrap>
-          <Icon to='/'>Jarvis</Icon>
           <FormContent>
-            <Form action='#'>
-              <FormH1>Sign in to your account</FormH1>
+            <Form onSubmit={handleSubmit(onSubmit)}>
+              <Icon to='/'>Jarvis</Icon>
+              <FormH1>Inscrivez-vous</FormH1>
+              <FormLabel htmlFor='for'>Nom</FormLabel>
+              <FormInput
+                {...register('lastName')}
+                placeholder='Votre nom...'
+                required
+              />
+              <FormLabel htmlFor='for'>Prénom</FormLabel>
+              <FormInput
+                {...register('firstName')}
+                placeholder='Votre prénom...'
+                required
+              />
               <FormLabel htmlFor='for'>Email</FormLabel>
-              <FormInput type='email' required />
-              <FormLabel htmlFor='for'>Password</FormLabel>
-              <FormInput type='password' required />
-              <FormButton type='submit'>Continue</FormButton>
-              <Text>Forgot password</Text>
+              <FormInput
+                {...register('email')}
+                placeholder='Votre addresse mail...'
+                required
+              />
+              {/* <FormLabel htmlFor='for'>Mot de passe</FormLabel>
+              <FormInput type='password' required /> */}
+              <FormButton type='submit'>S'inscrire</FormButton>
             </Form>
           </FormContent>
         </FormWrap>

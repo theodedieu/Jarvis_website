@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
-import { jarvisBlue, white } from '../constants';
+import { jarvisBlue, jarvisLightBlue, white } from '../constants';
 
 // background: ${({ scrollNav }) => (scrollNav ? white : 'transparent')};
 // padding: ${({ scrollNav }) => (scrollNav ? '3px' : '0px')};
@@ -118,7 +118,7 @@ export const NavBtnLink = styled(LinkR)`
   background: ${jarvisBlue};
   white-space: nowrap;
   padding: 10px 22px;
-  color: #010606;
+  color: ${white};
   font-size: 16px;
   outline: none;
   border: none;
@@ -128,7 +128,6 @@ export const NavBtnLink = styled(LinkR)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${white};
-    color: #010606;
+    background: ${jarvisLightBlue};
   }
 `;
