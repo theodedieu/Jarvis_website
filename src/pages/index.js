@@ -34,9 +34,6 @@ const Home = () => {
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
     const scrolled = `${scrollPx / winHeightPx * 100}%`;
-
-    console.log(scrolled);
-
     setScrolled(scrolled);
   };
 
