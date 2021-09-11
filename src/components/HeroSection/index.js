@@ -42,8 +42,15 @@ const HeroSection = () => {
             spy={true}
             exact={true}
             offset={-80}
-          >
-            Découvrir {hover ? <ArrowForward /> : <ArrowRight />}
+            >
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              textAlign: 'center'
+            }}>
+              Découvrir {hover ? <ArrowForward /> : <ArrowRight />}
+            </div>
           </Button>
         </HeroBtnWrapper>
       </HeroContent>

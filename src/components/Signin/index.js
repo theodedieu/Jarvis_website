@@ -1,5 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import {
   Container,
   Form,
@@ -22,18 +25,25 @@ const SignIn = () => {
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
     headers.append('Access-Control-Allow-Origin', '*');
-    fetch(APIUrl, {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => { 
-      console.log('Success:', data)
-    })
-    .catch(error => { 
-      console.error('Error:', error)
-    });
+    await toast.promise(
+      fetch(APIUrl, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => { 
+        console.log('Success:', data)
+      })
+      .catch(error => { 
+        console.error('Error:', error)
+      }),
+      {
+        pending: 'Inscription en cours',
+        success: 'Vous êtes inscrit !',
+        error: 'Oups, une erreur a eu lieu...'
+      }
+    )
   }
 
   return (
@@ -69,6 +79,17 @@ const SignIn = () => {
           </FormContent>
         </FormWrap>
       </Container>
+      <ToastContainer 
+        position="top-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 };
