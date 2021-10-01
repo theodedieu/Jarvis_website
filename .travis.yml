@@ -1,20 +1,8 @@
-# addons:
-#   ssh_known_hosts: <deploy-host>
+language: node_js
+node_js:
+  - "12.13"
 
-# before_deploy:
-# - openssl aes-256-cbc -K $encrypted_<...>_key -iv $encrypted_<...>_iv -in deploy_rsa.enc -out /tmp/deploy_rsa -d
-# - eval "$(ssh-agent -s)"
-# - chmod 600 /tmp/deploy_rsa
-# - ssh-add /tmp/deploy_rsa
-
-deploy:
-  - provider: script
-    skip_cleanup: true
-    script: npm install
-    on:
-      branch: main
-  - provider: script
-    skip_cleanup: true
-    script: npm run build
-    on:
-      branch: master
+# deploy:
+#   provider: npm
+#   email: "YOUR_EMAIL_ADDRESS"
+#   api_key: "YOUR_AUTH_TOKEN"
