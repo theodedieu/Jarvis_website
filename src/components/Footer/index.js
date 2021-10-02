@@ -3,11 +3,6 @@ import { animateScroll as scroll } from 'react-scroll';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 import {
   FooterContainer,
-  FooterLink,
-  FooterLinkItems,
-  FooterLinkTitle,
-  FooterLinksContainer,
-  FooterLinksWrapper,
   FooterWrap
 } from './FooterElements';
 
@@ -28,7 +23,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
-        <FooterLinksContainer>
+        {/* <FooterLinksContainer>
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>A propos</FooterLinkTitle>
@@ -44,7 +39,7 @@ const Footer = () => {
                 <FooterLink to=''>Partenariat</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
-        </FooterLinksContainer>
+        </FooterLinksContainer> */}
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to='/' onClick={toggleHome}>Jarvis</SocialLogo>
