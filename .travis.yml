@@ -10,7 +10,7 @@ before_install:
 - ssh-add deploy_rsa
 
 script:
-- ssh -i deploy_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no jarvis@161.35.77.232 'cd /home/jarvis/jarvis/Jarvis_website && git pull origin main && npm install && npm run build && rm -rf /var/www/html/* && mv build/* /var/www/html' && cd /home/jarvis/jarvis/Jarvis_website && git pull origin main && npm install && npm run build && rm -rf /var/www/html/* && mv build/* /var/www/html'
+- ssh -i deploy_rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no jarvis@161.35.77.232 'ls' #cd /home/jarvis/jarvis/Jarvis_website && git pull origin main && npm install && npm run build && rm -rf /var/www/html/* && mv build/* /var/www/html'
 
 branches:
   only:
