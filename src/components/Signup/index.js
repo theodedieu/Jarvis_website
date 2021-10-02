@@ -13,11 +13,11 @@ import {
   FormLabel,
   FormWrap,
   Icon
-} from './SigninElements';
+} from './SignupElements';
 
 const APIUrl = 'https://api.jarvis-app.fr/api/newsletter/add';
 
-const SignIn = () => {
+const SignUp = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async data => {
@@ -94,4 +94,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;
