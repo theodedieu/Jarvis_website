@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Link } from 'react-scroll';
+import { Link as LinkR } from 'react-router-dom';
 import { jarvisBlue, jarvisLightBlue, white } from './constants';
 
-export const Button = styled(Link)`
+export const Button = styled(LinkR)`
     border-radius: 50px;
     background: ${({ primary }) => (primary ? jarvisBlue : jarvisLightBlue)};
     white-space: nowrap;
@@ -17,6 +17,7 @@ export const Button = styled(Link)`
     align-items: center;
     transition: all 0.2s ease-in-out;
     flex-direction: column;
+    text-decoration: none;
 
     &:hover {
         transition: all 0.2s ease-in-out;

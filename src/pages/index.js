@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import Fade from 'react-reveal/Fade';
+
+import CardMember from '../components/CardMember';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
 import Navbar from '../components/Navbar';
 import Services from '../components/Services';
 import Sidebar from '../components/Sidebar';
-
-import Fade from 'react-reveal/Fade';
-
+import Timeline from '../components/Timeline';
 import {
   homeObjOne,
   homeObjTwo,
@@ -71,8 +72,12 @@ const Home = () => {
         <InfoSection {...homeObjTwo} />
       </Fade>
       <Fade left>
-        <InfoSection {...homeObjThree} />
+        <div id={homeObjThree.id}>
+          <InfoSection {...homeObjThree} />
+          <CardMember />
+        </div>
       </Fade>
+      <Timeline />
       <Fade>
         <InfoSection {...newsletter} />
       </Fade>

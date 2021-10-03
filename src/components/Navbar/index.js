@@ -14,7 +14,7 @@ import {
   NavMenu
 } from './NavbarElements';
 
-import Logo from '../../images/2022_logo_Jarvis.png';
+import Logo from '../../images/logo/2022_logo_Jarvis.png';
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -97,9 +97,22 @@ const Navbar = ({ toggle }) => {
                   L'équipe
                 </NavLinks>
               </NavItem>
+              <NavItem>
+                <NavLinks
+                  to='timeline'
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact='true'
+                  offset={-80}
+                  scrollNav={scrollNav}
+                >
+                  Timeline
+                </NavLinks>
+              </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to='/signin'>Découvrir</NavBtnLink>
+              <NavBtnLink to='/contact'>Nous contacter</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>
